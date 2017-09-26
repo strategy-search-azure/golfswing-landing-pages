@@ -63,12 +63,21 @@
       <h2>Get Your Free Trial Today.</h2>
       <p>Sign up in 30 seconds.  No credit card required.</p>
       <div class="form-area form">
+<<<<<<< HEAD
         <amp-iframe width="200" height="100"
         sandbox="allow-scripts allow-same-origin allow-forms"
         layout="responsive"
         frameborder="0"
         src="https://golfswing-landingpages.azurewebsites.net/30dayfreetrial-golflogix/form.html">
     </amp-iframe>
+=======
+        <form action="https://golfswing.com/register" method="post">
+          <input type="email" placeholder="Email" id="Email" name="Email">
+          <input type="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" oninvalid="this.setCustomValidity('Passwords must have at least one digit 0-9. Passwords must have at least one uppercase A-Z')" id="Password" name="Password">
+          <input type="password" placeholder="Confirm Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" oninvalid="this.setCustomValidity('Passwords must have at least one digit 0-9. Passwords must have at least one uppercase A-Z')" id="ConfirmPassword" name="ConfirmPassword">
+          <button class="btn" type="submit">SIGN UP</button>
+        </form>
+>>>>>>> parent of 38a4e51... adding new submit
       </div>
     </div>
   </div>
@@ -111,7 +120,7 @@
           <input type="email" placeholder="Email" id="Email" name="Email">
           <input type="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" oninvalid="this.setCustomValidity('Passwords must have at least one digit 0-9. Passwords must have at least one uppercase A-Z')" id="Password" name="Password">
           <input type="password" placeholder="Confirm Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" oninvalid="this.setCustomValidity('Passwords must have at least one digit 0-9. Passwords must have at least one uppercase A-Z')" id="ConfirmPassword" name="ConfirmPassword">
-          <input type="submit" value="SIGN UP" />
+          <button class="btn" type="submit">SIGN UP</button>
         </form>
       </div>
     </div>
