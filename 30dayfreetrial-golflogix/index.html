@@ -1,29 +1,15 @@
-<!DOCTYPE html>
-<html amp>
-	<head>
-	<meta charset="utf-8">
-	<title></title>
-	
-	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-	
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-	
-	
-		<link rel="stylesheet" href="style.css">
-	
-</head>
+---
+layout: default
+style: style.css
 
-	<body>
-		<header class="header fixed">
-  <div class="container">
-      <a href="https://golfswing.com"><img src="/img/golfswing.svg" class="header__logo" alt="" width="500" height="80"></a>
-      <a href="#form" class="btn">
-        30 Day Free Trial
-      </a>
-  </div>
-</header>
+components:
 
-		<div class="main">
+  -
+    name: amp-form
+    path: amp-form-0.1.js
+
+---
+<div class="main">
   <div class="hero hero--top">
   	<div class="hero__caption">
   		<h2>Join <span>Millions</span> of Golfers Improving Their Golf Swing.</h2>
@@ -81,7 +67,7 @@
         <div class="features__item-wrapper-item">
           <img src="img/drill-thumb.png" class="features__item-img" alt="">
           <h3>Targeted Lessons</h3>
-          <p>Over 40 lesson series.</p>
+          <p>Over 45 lesson series.</p>
         </div>
         <div class="features__item-wrapper-item">
           <img src="img/unlimited-browser.png" class="features__item-img" alt="">
@@ -108,19 +94,3 @@
   </div>
 
 </div>
-
-		<footer>
-	<img src="/img/golfswing.svg" class="header__logo" alt="">
-	<div class="footer__social">
-		<a class="copyright__social footer__social--fb" href="https://www.facebook.com/golfswingdotcom/" target="_blank"></a>
-		<a class="copyright__social footer__social--twitter" href="https://twitter.com/golfswingdotcom" target="_blank"></a>
-	</div>
-</footer>
-<div class="copyright">
-		<span>©2017 GolfSwing.com LLC</span>
-		<a href="#">Privacy</a>
-		<a href="#">Terms</a>
-</div>
-
-	</body>
-</html>

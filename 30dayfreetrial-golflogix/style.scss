@@ -1,0 +1,406 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+@import "base";
+
+.main {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero {
+  background-color: $color-black;
+  height: 800px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  padding: 20px 5%;
+  @include max-screen($medium-breakpoint){
+    height: 600px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    background: $color-white;
+    background-size: 100% 124px;
+    border-top: 30px solid $color-green;
+    transform: skewY(-3deg);
+    @include max-screen($medium-breakpoint){
+      bottom: -100px;
+    }
+  }
+
+  &--top {
+    background-image: url('img/hero--top-bg.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .btn {
+    margin-top: 20px;
+  }
+
+  .hero__caption {
+    text-align: center;
+    font-weight: 300;
+    color: white;
+    max-width: 800px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: -50px;
+    @include max-screen($medium-breakpoint){
+      align-items: center;
+      margin-top: -100px
+    }
+    @include max-screen($mobile-breakpoint){
+      margin-top: -150px;
+    }
+
+    h2{
+      text-align: left;
+      width: 100%;
+      font-family: $font-family;
+      font-size: 3rem;
+      line-height: 3.5rem;
+      letter-spacing: 1px;
+      margin: 0;
+      text-transform: uppercase;
+      color: $color-white;
+      @include max-screen($medium-breakpoint){
+        text-align: center;
+        font-size: 2.5rem;
+      }
+      @include max-screen($mobile-medium-breakpoint){
+        font-size: 1.8rem;
+        line-height: 1.9rem;
+      }
+      sup{
+        top: -1.5em;
+        font-size: 1.4rem;
+        @include max-screen($tablet-breakpoint){
+          font-size: .8rem;
+        }
+        @include max-screen($mobile-breakpoint){
+          font-size: 1.8rem;
+        }
+      }
+    }
+    p{
+      text-align: center;
+      font-size: 1.4rem;
+      line-height: 1.5rem;
+      font-weight: 400;
+      margin: 20px 0;
+      @include max-screen($tablet-breakpoint){
+        font-size: 1.1rem;
+      }
+      @include max-screen($mobile-medium-breakpoint){
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+      }
+      @include max-screen($mobile-breakpoint){
+        font-size: 1.2rem;
+      }
+    }
+    .btn{
+      width: 200px;
+    }
+  }
+}
+
+.intro-image {
+  position: absolute;
+  width: 829px;
+  margin-left: -10px;
+  top: 400px;
+  right: 0;
+  width: 50%;
+  height: 1000px;
+  z-index: 100;
+  overflow-x: hidden;
+  pointer-events: none;
+  transform: rotate(-3deg);
+  transform-origin: 100% 0;
+  @include max-screen($nav-breakpoint) {
+    width: 100%;
+    right: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    top: 520px;
+    margin-left: 0;
+  }
+  @include max-screen($toc-breakpoint){
+    width: 100%;
+    height: 500px;
+  }
+  @include max-screen($mobile-medium-breakpoint){
+    transform: none;
+  }
+  @include max-screen($medium-breakpoint){
+    top: 395px;
+  }
+  @include max-screen($mobile-breakpoint){
+    top: 400px;
+  }
+
+&__img-browser {
+  padding: 0;
+  width: 50%;
+  min-width: 700px;
+  max-width: 700px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include max-screen($nav-breakpoint){
+    min-width: 450px;
+    max-width: 450px;
+    position: relative;
+  }
+  @include max-screen($mobile-medium-breakpoint){
+    min-width: 350px;
+    max-width: 350px;
+    left: 30px;
+  }
+  @include max-screen($mobile-breakpoint){
+    min-width: 300px;
+    max-width: 300px;
+    left: 25px;
+  }
+}
+
+&__img-phone {
+    padding: 0;
+    width: 50%;
+    min-width: 250px;
+    max-width: 250px;
+    position: absolute;
+    top: 50px;
+    left: 585px;
+    @include max-screen($nav-breakpoint){
+      min-width: 125px;
+      max-width: 125px;
+      top: 50px;
+      left: -20px;
+      position: relative;
+    }
+    @include max-screen($mobile-medium-breakpoint){
+      min-width: 100px;
+      max-width: 100px;
+      top: 50px;
+      left: -30px;
+    }
+    @include max-screen($mobile-breakpoint){
+      min-width: 75px;
+      max-width: 75px;
+      left: -25px;
+      top: 70px;
+    }
+}
+
+&__img-tablet {
+    padding: 0;
+    width: 50%;
+    min-width: 600px;
+    max-width: 600px;
+    position: absolute;
+    top: 450px;
+    left: 100px;
+    @include max-screen($nav-breakpoint){
+      min-width: 330px;
+      max-width: 330px;
+      top: 65px;
+      left: -30px;
+      position: relative;
+    }
+    @include max-screen($medium-breakpoint){
+      display: none;
+    }
+    }
+  }
+
+  .intro-text {
+    width: 100%;
+    padding: 60px 5%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 700px;
+    @include max-screen($nav-breakpoint){
+      padding: 150px 5% 80px;
+      text-align: center;
+      align-items: center;
+      min-height: 800px;
+    }
+    @include max-screen($medium-breakpoint){
+      padding: 220px 20px 80px;
+      min-height: 850px;
+    }
+    @include max-screen($mobile-medium-breakpoint){
+      padding: 80px 20px 80px;
+      min-height: 775px;
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 200px;
+      position: absolute;
+      left: 0;
+      bottom: 60px;
+      background: $color-lightgrey;
+      background-size: 100% 124px;
+      transform: skewY(-3deg);
+    }
+
+    .btn {
+      margin: 40px auto 0;
+    }
+    ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+    li {
+      font-size: 1.2rem;
+      padding: 10px 0;
+      @include max-screen($nav-breakpoint) {
+        text-align: left;
+      }
+      @include max-screen($tablet-breakpoint){
+        font-size: 1.1rem;
+      }
+      @include max-screen($mobile-breakpoint){
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  #form {
+    padding: 0;
+    margin-top: -150px;
+    position: relative;
+    @include max-screen($tablet-breakpoint){
+      margin-top: -200px;
+    }
+  }
+
+  .form-1 {
+    padding: 0 0 200px;
+    @include max-screen($tablet-breakpoint){
+      padding: 0 20px 200px;
+      margin-top: -60px;
+    }
+  }
+
+  .form-2 {
+    padding: 0 0 60px;
+    margin-top: -75px;
+    @include max-screen($tablet-breakpoint){
+      padding: 0 20px 60px;
+      margin-top: -60px;
+    }
+  }
+
+  .features {
+    position: relative;
+    display: block;
+    padding: 0 20px 400px;
+    @include max-screen($toc-breakpoint){
+
+    }
+    @include max-screen($tablet-portrait-breakpoint){
+      padding: 0 20px 300px;
+    }
+    @include max-screen($mobile-breakpoint){
+      padding: 0 20px 350px;
+    }
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 200px;
+      position: absolute;
+      left: 0;
+      top: -124px;
+      background: $color-white;
+      background-size: 100% 124px;
+      transform: skewY(-3deg);
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 200px;
+      position: absolute;
+      left: 0;
+      bottom: 60px;
+      background: $color-lightgrey;
+      background-size: 100% 124px;
+      transform: skewY(-3deg);
+    }
+
+    &__wrapper {
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    &__item-wrapper {
+      flex: 0 0 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      width: 100%;
+      padding: 0;
+    }
+
+    &__item-wrapper-item {
+      flex: 0 0 25%;
+      padding: 20px;
+      @include max-screen($toc-breakpoint){
+        flex: 0 0 50%;
+        padding: 40px;
+      }
+      @include max-screen($tablet-portrait-breakpoint){
+        flex: 0 0 100%;
+        padding: 40px 20%;
+      }
+      @include max-screen($mobile-breakpoint){
+        flex: 0 0 100%;
+        padding: 20px;
+      }
+
+      h3 {
+        text-align: center;
+        margin: 0;
+      }
+
+      p {
+        font-size: 1rem;
+        margin: 0;
+        text-align: center;
+      }
+    }
+
+    &__item-img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+  }
