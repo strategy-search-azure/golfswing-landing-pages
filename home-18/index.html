@@ -8,7 +8,9 @@
 	
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Teko:400,500" rel="stylesheet">
-	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.css">
+	<!-- <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.css"> -->
+	<link rel="stylesheet" href="../css/flickity.css">
+	<link rel="stylesheet" href="../css/magnific-popup.css">
 	
 	
 		<link rel="stylesheet" href="style.css">
@@ -37,7 +39,7 @@
     <ul class="header__left-nav-list">
       <li class="header__left-nav-item">
         <a href="#" class="header__left-nav-link">
-          Signature Programs
+          Signature Series
         </a>
       </li>
       <li class="header__left-nav-item">
@@ -93,7 +95,7 @@
   	<div class="hero__caption">
       
   		<h2>Get Your Fix. On Demand.</h2>
-  		<a class="hero__action">
+  		<a class="hero__action popup-player" href="img/golfswing-intro.mp4">
   		  <img src="img/play.svg" alt="">
         <p>Watch Trailer</p>
   		</a>
@@ -214,12 +216,12 @@
       
       <div class="stats__item">
         <h2 id="stats__number--2">0</h2>
-        <h4>On Demand Videos</h4>
+        <h4>Videos On Demand</h4>
       </div>
       
       <div class="stats__item">
         <h2 id="stats__number--3">0</h2>
-        <h4>Signature Programs</h4>
+        <h4>Signature Series</h4>
       </div>
       
       <div class="stats__item">
@@ -239,13 +241,13 @@
   <div class="series">
     
     
-    <h3 class="headline--dark">Signature Programs</h3>
+    <h3 class="headline--dark">Signature Series</h3>
     <h4 class="subheadline">Training Programs for Every Golfer.</h4>
     
 
     <div class="series__action">
       
-      <a href="#" class="btn btn--blue">View All Programs</a>
+      <a href="#" class="btn btn--blue">View All Series</a>
       
     </div>
 
@@ -849,7 +851,7 @@
       </div>
       
     </div>
-    
+
     
   </div>
 </div>
@@ -888,8 +890,10 @@ mixpanel.init("f5811ab468325c6c297d5dcdd6f0e8ae");</script>
 	</body>
 </html>
 
+<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="js/countUp.min.js"></script>
 <script src="js/flickity.pkgd.js"></script>
+<script src="js/jquery.magnific-popup.js"></script>
 
 <script>
 	//off-canvas nav for mobile
@@ -920,17 +924,6 @@ mixpanel.init("f5811ab468325c6c297d5dcdd6f0e8ae");</script>
 		button.addEventListener('click', toggleActive);
 		})();
 </script>
-
-<!-- <script>
-	window.onscroll = function() {
-		var header = document.getElementById('header-2');
-		if ( window.pageYOffset > 100 ) {
-				header.classList.add("header-2__scroll");
-		} else {
-				header.classList.remove("header-2__scroll");
-		}
-	}
-</script> -->
 
 <script>
 (function () {
@@ -1064,5 +1057,23 @@ mixpanel.init("f5811ab468325c6c297d5dcdd6f0e8ae");</script>
 		pageDots: false,
 		setGallerySize: false,
 		initialIndex: 0
+	});
+</script>
+
+<script>
+	$('.popup-player').magnificPopup({
+		type: 'iframe',
+		mainClass: 'mfp-fade',
+		removalDelay: 160,
+		preloader: true,
+		fixedContentPos: false,
+		iframe: {
+				markup: '<div class="mfp-iframe-scaler">'+
+								'<div class="mfp-close"></div>'+
+								'<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
+							'</div>',
+
+				srcAction: 'iframe_src',
+				}
 	});
 </script>
